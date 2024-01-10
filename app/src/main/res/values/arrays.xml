@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="subjects_array">
+        <item>algebra</item>
+        <item>physics</item>
+        <item>english</item>
+        <item>history</item>
+    </string-array>
+</resources>

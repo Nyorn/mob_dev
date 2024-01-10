@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewStudentDataActivity">
+
+    <EditText
+        android:id="@+id/editTextSearchStudent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Search by name"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerSubjectFilter"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerFilterSubjects"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnApplyFilter"
+        android:layout_width="410dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:text="Filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerFilterSubjects" />
+
+    <Button
+        android:id="@+id/buttonSortByOverallAverage"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="Share grade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearchStudent" />
+
+    <Button
+        android:id="@+id/buttonSortByAverageGrade"
+        android:layout_width="127dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="96dp"
+        android:text="Sort"
+        app:layout_constraintStart_toStartOf="@+id/buttonSortByOverallAverage"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSubjectFilter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStudents"
+        android:layout_width="399dp"
+        android:layout_height="448dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSortByAverageGrade"
+        app:layout_constraintVertical_bias="0.682" />
+
+    <Button
+        android:id="@+id/buttonResetFilters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reset filters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBack"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="204dp"
+        android:layout_height="48dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonResetFilters" />
+</androidx.constraintlayout.widget.ConstraintLayout>
